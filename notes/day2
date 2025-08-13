@@ -1,0 +1,260 @@
+ARITHETIC OPERATORS 
+
+syntax - place operator in between the operands - infix operation
++ - * // / % **
+
+All operators are binary operators. They need 2 operands/values/input
+The rule/syntax says we must place the operator in between the operands which is INFIX notation.
+The I/P are numbers.
+The O/P is number.
+The operators + and - have the least precedence (heirarchy/preference)
+All the Arithmetic operators except the power operator have Left to Right Associtivity.
+x + y + z
+4 + 5 - 19
+Here, the expression 4 + 5 is evaluated 1st
+2 ** 3 ** 2
+Here 3 ** 2 is evaluated 1st.
+NOTE:
+The way +ve integers are stored in memory, the way -ve integers are stored in memory and the floating point numbers (number with precission) are all different.
+
+num = 67
+Here 67 is just converted to binary sna stored. Also note that the number 67 here is Decimal number.
+num = 0o67
+Here the number is Octal
+num = 0b101010
+Here the number is binary
+num = 0x99
+num = 0X99
+num = 0X7F
+Here all the 3 examples are of Hexa-Decimal numbers
+f   hexa-decimal
+17  octal
+15  decimal
+1111 binary
+ff = 15 * 16(1) + 15 * 16(0) = 240 + 15 = 255
+11111111
+ffff = 65535
+In a particular case, 11111111 is not 255. When is it ?
+So in signed byte, the max value and minimum values (respectively) are:"
+01111111 = 127
+10000000 = -128
+
+num = -23
+-23
+23
+00010111
+11101000
+11101001
+-1 * 2(7) + 1 * 2(6) + 1 * 2(5) + 9
+-128 + 64 + 32 + 9
+-64 + 41
+= -23
+
+floating point numbers are stored using IEEE standards.
+
+5 + 6
+0101
+0110
+1011
+
+5 + 6.055
+5.0 + 6.055
+
+4 - 5 % 7
+4 + 8 + 9
+Here the expressions are read from L -> R
+But they are evaluated only after converting user given infix notation expression into postfix expression.
+
+RELATIONAL OPERATORS:
+> < >= <= != ==
+
+All are binary.
+I/P are numbers
+O/P is boolean
+Used wih infix notation.
+Have higher precedence than logical operators but lesser than Arithmetic.
+
+for i from 1 to N do
+for i = 1; i <= N; i++:
+for i = 1; i < N+1; i++:
+
+for i = 1; i <= 20; i++
+for i = 1;  i < 21; i++
+
+[10, 20] Closed Interval
+i >= 10 and i <= 20
+[10, 20)
+i >= 10 and i < 20
+(20, 50)
+---------------------------------------------------
+LOGICAL OPERATORS:
+& && | || ! (C/C++/Java/C# etc)
+
+and or not !  (Python)
+
+I/P are boolean
+O/P is boolean
+
+a = b
+variable = value
+-----------------------------------
+Important points while implementing a solution:
+1. Time efficiency
+2. Space efficiency
+3. Simplicity/Readability
+4. Maintainability
+-------------------------------------------
+HOW TO SOLVE A PROBLEM:
+
+1. Read the problem statement carefully. List down the I/P data, relavant information. Isolate the unwanted information. Assertain what is the O/P.
+Outcome: I/P we know, O/P we know
+
+2. Find the solution. Forget programming. Find the solution using any specific technique or using some formula or trial and error method.
+Outcome: We know the solution
+
+3. Write the Algorithm. Step by step procedure. Each step must be simple, unambigious and finite.
+
+4. Write the Fake-code (Pseucode)
+
+5. Code it!
+
+6. Unit testing, Cyxclomatic complexity (to find number of paths in the logic), optimize the logic.
+
+i/p: non negative number. 
+math.sqrt we need to use
+o/p: print PS or Not
+
+45      6.8     6   36
+144     12.0    12  144
+
+Read a non-ve number, say N
+find root of N, say ROOT
+convert ROOT to integer
+check if ROOT * ROOT is N
+if yes, print N is Perfect Square
+else, print N is not a P S
+
+N = input()
+ROOT = square_root(N)
+ROOT = integer(ROOT)
+if ROOT * ROOT is equal to N, then
+    print N is a P S
+else
+    print N is not a P S
+---------------------------------------------------
+
+learn all the libraries and modules of python - know return what arguments and what is its job
+
+Accept the average score of the student and print the result as follows:
+0  to 59     Fail
+60 to 84     Second class
+85 to 95     First class
+96 to 100    Excellent
+Also check for invalid score. No negative marking.
+'''
+average_score = int(input('Enter your average score to print the result: '))
+if average_score >= 0 and average_score <= 59:
+    print('Result is Fail')
+elif average_score <= 84:
+    print('Result is Second class')
+elif average_score <= 95:
+    print('Result is First class')
+elif average_score <= 100:
+    print('Result is Excellent')
+else:
+    print('Invalid Score')
+	
+-------------------------------------------------------------------------------------------------------------------
+after DATA INFERENCING - this type of code can be given to real time implemetation for college purpose
+
+average_score = int(input('Enter your average score to print your result: '))
+if average_score >= 0 and average_score <= 59:
+	print('Result is Fail')
+elif average_score <= 84:
+	print('Result is Second class')
+elif average_score <= 95:
+	print('Result is First class')
+elif average_score <= 100:
+	print('Result is Excellent')
+else:
+	print('Invalid score')
+----------------------------------------
+Important points while implementing a solution:
+1. Time efficiency
+2. Space efficiency
+3. Simplicity/Reusability
+4. Maintainability
+------------------------------------------
+unit testing is white box testing - https://www.geeksforgeeks.org/software-testing/software-engineering-white-box-testing/
+
+one order at a time - i should try many order at a time
+
+
+	print('1:Idly 2:Dosa 3:Upma 4:Puri')
+user_choice = int(input('Enter your choice of food: '))
+
+match user_choice:
+    case 1 : print('Yummy and soft Idli for you')
+    case 2 : print('The famous Milari Dosa')
+    case 3 : print('The tasty Brahmin Upma ')
+    case 4 : print('Hot and Spicy Channa-Puri')
+    case _ : print('Protein rich Cockroaches for you Maam')
+---------------------------------------------------------------------------------------------	
+	print('Welcome to our restaurant THE TASTE')
+
+food_type = int(input('1:North 2:South. Your choice Please: '))
+match food_type:
+    case 1 :
+        print('1:Roti-Subji 2:Poha 3:Samosa 4:pav-bhaji')
+        user_choice = int(input('Enter your choice of food: ')) 
+        match user_choice:
+            case 1 : print('Roti-Subji')
+            case 2 : print('Poha')
+            case 3 : print('Samosa')
+            case 4 : print('pav-bhaji')
+            case _ : print('Protein rich Cockroaches for you Maam')
+    case 2 : 
+        print('1:Idly 2:Dosa 3:Upma 4:Puri')
+        user_choice = int(input('Enter your choice of food: '))
+        match user_choice:
+            case 1 : print('Yummy and soft Idli for you')
+            case 2 : print('The famous Milari Dosa')
+            case 3 : print('The tasty Brahmin Upma ')
+            case 4 : print('Hot and Spicy Channa-Puri')
+            case _ : print('Protein rich Cockroaches for you Maam')
+    case _ : print('This is not Garden Maamu')
+print('Thank you Visit again!')
+
+---------------------------------------------------------------------------------------------------
+print('Welcome to our restaurant THE TASTE')
+
+while True:
+    food_type = int(input('1:North 2:South. Your choice Please: '))
+    match food_type:
+        case 1 :
+            print('1:Roti-Subji 2:Poha 3:Samosa 4:pav-bhaji')
+            user_choice = int(input('Enter your choice of food: ')) 
+            match user_choice:
+                case 1 : print('Roti-Subji')
+                case 2 : print('Poha')
+                case 3 : print('Samosa')
+                case 4 : print('pav-bhaji')
+                case _ : print('Protein rich Cockroaches for you Maam')
+        case 2 : 
+            print('1:Idly 2:Dosa 3:Upma 4:Puri')
+            user_choice = int(input('Enter your choice of food: '))
+            match user_choice:
+                case 1 : print('Yummy and soft Idli for you')
+                case 2 : print('The famous Milari Dosa')
+                case 3 : print('The tasty Brahmin Upma ')
+                case 4 : print('Hot and Spicy Channa-Puri')
+                case _ : print('Protein rich Cockroaches for you Maam')
+        case _ : print('This is not Garden Maamu')
+    user_choice = int(input('Do you wish to have more? Yes:1, No:2. Your choice Please: '))
+    if user_choice != 1:
+        break
+print('Thank you Visit again!')
+-----------------------------------------------------------------------------------------------------------------------------------
+cla - command line argumnet
+argv - list an array - array of strings - strings(file name)
+srp - single responsibility principle - one thing at a time

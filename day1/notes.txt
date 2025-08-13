@@ -1,0 +1,135 @@
+DAY1 MONDAY 11-08-2025
+
+Applications to be installed:
+git
+vs code
+python
+notepad++
+
+The Apps they must have on their systems are:
+1. VS Code
+Google Search: Download vs code
+Click on Link: https://code.visualstudio.com/download
+Click on the OS you are using on your system
+
+2. Git
+Google Search: Download Git
+Click on Link: https://git-scm.com/downloads
+Click on the OS you are using on your system
+
+3. Python
+Google Search: Download Python
+Click on Link: https://www.python.org/downloads/
+Click on the OS you are using on your system
+Alternatively Click big Yellow Button (with the version)
+
+4. Notepad++
+Google Search: Download notepad++
+Click on Link: https://notepad-plus-plus.org/downloads/
+Click on:	   Download Notepad++ v8.7.7
+
+5. MongoDB
+Google Search: Download mongoDB server
+Click on Link: https://www.mongodb.com/try/download/community
+version: 8.0.5 (Package must be .msi)
+Google Search: Download mongoDB shell
+Click on Link: https://www.mongodb.com/try/download/shell
+Note: Also download Compass which is in the same web page as of shell
+----------------------------------------------
+Working With Git:
+Create git account with your permanent email Id.
+Now Login into github.com
+
+CREATE NEW GIT REPOSITORY:
+In the logged-in home page, click + (new repo icon on some where right-top in the webpage) and click "New repository"
+
+Give Repo Name
+Description
+Visibility of the repo: public
+Select the Add README file
+Click Create Repository (green button)
+
+add new file from within github:
+now go to the repo you wish to work with.
+click on add new file icon (+)
+now give name of the file (u can create the new file from inside a new sub-folder)
+Add content of the file.
+Now commit. Optionally we can give information about the commit.
+
+CLONING A GIT REPO:
+$ git clone https://github.com/neelmyna/gsss_sic
+
+GIT CONFIGURATION:
+
+$ git config --global user.name "neelmyna"
+$ git config --global user.email "nithincheeta@gmail.com"
+
+CREATING PAT (personal access token):
+Click on profile icon (Top right corner)
+Click settings
+scroll down and on left bottom corner click developer settings
+On top left corner, click personal access tokens, click tokens classic
+Click generate new token -> generate new token classic
+Add a note for the new PAT
+Select expiry -> No expiry
+Select the top check-box "Repo"
+Click on green button generate token
+Now copy the PAT and mail it to yourself.
+
+Template to clone repo with PAT:
+$ git clone https://PAT@github.com/neelmyna/gsss_sic
+
+TO UPDATE REMOTE REPO W.R.T. LOCAL (to copy files from local repo to remote):
+
+The 3 commands are:
+add, commit and push
+
+Template for add:
+$ git add <PATH>
+
+Examples:
+$ git add .
+Stages all files from the current folder and all files from sub folders also.
+
+$ git add ./programs
+Stages all files from the sub-folder named "programs" and all files from its sub folders also.
+
+Template for commit:
+$ git commit -m "<relevant message>"
+
+Example:
+$ git commit -m "program for implementing binary search using recursion is added. Though it is bad way to solve the problem  using recursion"
+
+Template for push:
+$ git push
+
+Example:
+$ git push
+If you are sure of pushing into the main branch. Alternatively if we have no other branch.
+
+$ git push origin backend
+If we are sure enough to push to a specific branch provided we are in the specific branch.
+
+TO UPDATE LOCAL REPO W.R.T. REMOTE (to copy files from REMOTE repo to local repo):
+
+$ git pull origin main
+Note that if any files are deleted in the remote repo, these files will also deleted in the local repo.
+-------------------------------------
+Python:
+program 1:
+i = -1
+i -= -1
+print(f'i = {i}')
+
+program 2:
+print( print('I love Python Programming') ) # Here the inner print is rerturning None which is what the outer print is printing.
+
+print() # Here the print is printing nothing
+
+program 3:
+# Program to check if the given integer number is Even.
+
+input_number = int(input('Enter a  number to check if it is Even: '))
+
+if input_number % 2 == 0:
+    print('The given number ', input_number, ' is an Even number')
